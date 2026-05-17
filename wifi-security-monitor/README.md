@@ -70,6 +70,12 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+Neu gap loi thieu module nhu `yaml`, hay chac chan da cai dependency vao dung virtualenv:
+
+```bash
+.venv/bin/pip install -r requirements.txt
+```
+
 Kiem tra interface:
 
 ```bash
@@ -132,7 +138,7 @@ sudo .venv/bin/python -m detector.main
 Chay web app (trong Kali):
 
 ```bash
-sudo .venv/bin/uvicorn webapp.app:app --host 0.0.0.0 --port 8000
+sudo .venv/bin/python -m uvicorn webapp.app:app --host 0.0.0.0 --port 8000
 ```
 
 Mo trinh duyet:

@@ -18,6 +18,16 @@
 - Run sniff with sudo.
 - Ensure venv is activated.
 
+## 3.1) ModuleNotFoundError: No module named 'yaml'
+
+- Install dependencies into the project venv: `.venv/bin/pip install -r requirements.txt`
+- If you created the venv but did not install requirements, PyYAML will be missing.
+
+## 3.2) `uvicorn: command not found`
+
+- Use module invocation instead of the binary: `sudo .venv/bin/python -m uvicorn webapp.app:app --host 0.0.0.0 --port 8000`
+- If that still fails, reinstall requirements inside the venv.
+
 ## 4) Scapy not seeing RSSI
 
 - Not all adapters expose dBm_AntSignal.
